@@ -31,3 +31,7 @@ Route::get('/dashboard/detalleProducto',[DetalleProductoController::class, 'inde
 Route::get('/dashboard/detalleProveedor',[DetalleProveedor::class,'index'])->name('Proveedor');
 Route::get('/dashboard/altaProveedor',[RegistroProveedor::class,'index']);
 Route::get('/dashboard/acerca',[AcercaController::class, 'index'])->name('Acerca');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
